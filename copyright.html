@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Copyright Declaration — Constitutional Style</title>
+  <meta name="description" content="A constitutional-style copyright notice for a portfolio with five enumerated rules, styled and interactive." />
+  <style>
+    :root{
+      --bg:#f7f2ea;
+      --accent:#2b3a67;
+      --muted:#6b6b6b;
+      --paper:#fffdf7;
+      --gold:#c79b3a;
+      --maxw:980px;
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,var(--bg),#efe9dd 60%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+    }
+    .card{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--paper);
+      box-shadow:0 8px 30px rgba(43,58,103,0.12);
+      border-radius:12px;
+      padding:32px;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    header{
+      display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:18px;
+    }
+    .crest{
+      display:flex;align-items:center;gap:12px;
+    }
+    .crest .logo{
+      width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#40558f);display:grid;place-items:center;color:white;font-weight:700;font-size:18px;
+      box-shadow:0 4px 12px rgba(43,58,103,0.18);
+    }
+    h1{font-size:20px;margin:0;letter-spacing:0.6px}
+    p.lead{margin:6px 0 0;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px}
+
+    .preamble{
+      border-left:4px solid var(--gold);
+      padding:18px 20px;border-radius:6px;background:linear-gradient(180deg,rgba(199,155,58,0.03),transparent);
+      margin:18px 0 22px;color:#333;font-size:15px;line-height:1.6;
+    }
+    .laws{display:grid;grid-template-columns:1fr;gap:12px}
+    .law{
+      background:linear-gradient(180deg,rgba(43,58,103,0.02),transparent);
+      padding:14px;border-radius:8px;border:1px solid rgba(43,58,103,0.04);
+    }
+    .law h3{margin:0 0 6px;font-size:15px}
+    .law p{margin:0;color:#333;font-size:14px;line-height:1.5}
+    .meta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .meta .info{color:var(--muted);font-size:13px}
+    .actions{margin-left:auto;display:flex;gap:10px}
+    button{background:var(--accent);color:white;border:0;padding:8px 12px;border-radius:8px;cursor:pointer;font-family:Inter,system-ui,Arial;font-size:13px}
+    button.ghost{background:transparent;color:var(--accent);border:1px solid rgba(43,58,103,0.08)}
+    .small{font-size:12px;padding:6px 10px;border-radius:6px}
+
+    .notice{margin-top:18px;background:#fff6f0;border-left:4px solid #ffb397;padding:12px;border-radius:6px;color:#66331a}
+    footer{margin-top:20px;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:space-between}
+
+    @media (min-width:820px){
+      .laws{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <header>
+      <div class="crest">
+        <div class="logo">©</div>
+        <div>
+          <h1>Copyright Declaration</h1>
+          <p class="lead">An authoritative notice for portfolios, asserting ownership, permitted uses, and remedies.</p>
+        </div>
+      </div>
+      <div class="actions" aria-hidden="false">
+        <button id="toggleView" class="small ghost">Toggle Compact View</button>
+        <button id="downloadBtn" class="small">Download Text</button>
+        <button id="copyBtn" class="small ghost">Copy to Clipboard</button>
+      </div>
+    </header>
+
+    <section class="preamble" id="preamble" aria-label="Preamble">
+      <strong>I, the creator of this portfolio,</strong> having resolved to present works of creativity, innovation, and design, do hereby solemnly declare that all content contained herein including but not limited to text, source code, graphics, photographs, and layouts is the original creation and intellectual property of <span id="authorPlaceholder">[Your Name]</span> and is protected under the laws of the Republic of India.
+    </section>
+
+    <section class="laws" aria-label="Rules and Regulations">
+
+      <article class="law" id="law1">
+        
+        <h3>Law I — Originality &amp; Ownership</h3>
+        <p>"Section 17, Copyright Act, 1957"</p>
+        <p>All material within this portfolio is presumed original and owned by the creator unless expressly stated otherwise. Attribution will be provided for third-party works and assets used under license or permission.</p>
+      </article>
+
+      <article class="law" id="law2">
+        <h3>Law II — Reproduction &amp; Distribution</h3>
+        <p>"Section 14, Copyright Act, 1957"</p>
+        <p>Reproduction, redistribution, or republication of any material from this portfolio in whole or in part, by any means electronic, mechanical, or other is prohibited without the prior written consent of the creator, except as permitted under applicable statutory exceptions such as fair dealing for private study, criticism, or review.</p>
+      </article>
+
+      <article class="law" id="law3">
+        <h3>Law III — Moral Rights &amp; Attribution</h3>
+        <p>"Section 22–29, Copyright Act, 1957"</p>
+        <p>The creator retains moral rights over their works. Any authorized use must include proper credit to the creator in a manner consistent with customary academic and professional practice.</p>
+      </article>
+
+      <article class="law" id="law4">
+        <h3>Law IV — Licensing &amp; Permissions</h3>
+        <p>"Section 52, Copyright Act, 1957"</p>
+        <p>Requests for commercial use, derivative works, or high-resolution assets should be directed to the creator. Licensing terms will be set in writing and may include fees, attribution requirements, and scope limitations.</p>
+      </article>
+
+      <article class="law" id="law5">
+        <h3>Law V — Remedies, Notices &amp; Governing Law</h3>
+        <p>"Section 55–62, Copyright Act, 1957"</p>
+        <p>Unauthorized use may result in legal remedies under the Copyright Act, 1957 and other applicable laws. Notices of infringement or requests for permission should be sent to the contact information provided by the creator. This declaration is governed by the laws of India.</p>
+      </article>
+
+    </section>
+
+    <!-- <div class="notice" role="note">
+      <strong>Important:</strong> Replace <em>[Your Name]</em> with your full legal name and update the year below before publishing. This page is a template and does not substitute for legal advice.
+    </div> -->
+
+    <div class="meta">
+      <div class="info">© <span id="yearPlaceholder"></span> <span id="authorPlaceholder2">[Your Name]</span> — All Rights Reserved.</div>
+      <div class="actions" style="margin-left:auto">
+        <button id="printBtn" class="ghost small">Print</button>
+      </div>
+    </div>
+
+    <footer>
+      <!-- <div>Prepared with dignity — modeled on constitutional tone.</div> -->
+      <div class="meta" style="gap:8px"><small class="info">Last updated: <span id="lastUpdated"></span></small></div>
+    </footer>
+
+    
+  </div>
+
+  <script>
+    // Auto-fill author and year placeholders
+    (function(){
+      const now = new Date();
+      const year = now.getFullYear();
+      const lastUpdated = now.toLocaleDateString();
+
+      const author = localStorage.getItem('portfolioAuthor') || 'Khalid Ziya Khan';
+      document.getElementById('authorPlaceholder').textContent = author;
+      document.getElementById('authorPlaceholder2').textContent = author;
+      document.getElementById('yearPlaceholder').textContent = year;
+      document.getElementById('lastUpdated').textContent = lastUpdated;
+
+      // Buttons
+      const copyBtn = document.getElementById('copyBtn');
+      const downloadBtn = document.getElementById('downloadBtn');
+      const toggleView = document.getElementById('toggleView');
+      const printBtn = document.getElementById('printBtn');
+
+      function getTextContent(){
+        const title = 'Copyright Declaration — In the Style of a Constitutional Preamble\n\n';
+        const preamble = document.getElementById('preamble').innerText + '\n\n';
+        const laws = Array.from(document.querySelectorAll('.law')).map((el,i)=>{
+          return (i+1) + '. ' + el.querySelector('h3').innerText + '\n' + el.querySelector('p').innerText + '\n\n';
+        }).join('');
+        const footer = `© ${year} ${author} — All Rights Reserved.\nProtected under the Copyright Act, 1957 (as amended).`;
+        return title + preamble + laws + footer;
+      }
+
+      copyBtn.addEventListener('click', async ()=>{
+        try{
+          await navigator.clipboard.writeText(getTextContent());
+          copyBtn.textContent = 'Copied!';
+          setTimeout(()=>copyBtn.textContent='Copy to Clipboard',1500);
+        }catch(e){
+          alert('Copy failed — your browser may not support clipboard API.');
+        }
+      });
+
+      downloadBtn.addEventListener('click', ()=>{
+        const blob = new Blob([getTextContent()],{type:'text/plain;charset=utf-8'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'copyright-declaration.txt';
+        document.body.appendChild(a); a.click(); a.remove();
+        URL.revokeObjectURL(url);
+      });
+
+      toggleView.addEventListener('click', ()=>{
+        document.body.classList.toggle('compact');
+        if(document.body.classList.contains('compact')){
+          toggleView.textContent = 'Expand View';
+          document.querySelectorAll('.law p').forEach(p=>p.style.display='none');
+        }else{
+          toggleView.textContent = 'Toggle Compact View';
+          document.querySelectorAll('.law p').forEach(p=>p.style.display='block');
+        }
+      });
+
+      printBtn.addEventListener('click', ()=>window.print());
+
+      // Allow user to set author quickly by clicking the author text
+      document.getElementById('authorPlaceholder').addEventListener('click', ()=>{
+        const name = prompt('Enter your full name to appear on the declaration:', author);
+        if(name){
+          localStorage.setItem('portfolioAuthor',name);
+          document.getElementById('authorPlaceholder').textContent = name;
+          document.getElementById('authorPlaceholder2').textContent = name;
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>
